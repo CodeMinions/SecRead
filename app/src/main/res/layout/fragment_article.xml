@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".frags.ArticleFragment">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="#96dcd5">
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/broder_tags"
+            android:backgroundTint="#82c2f7"
+            android:gravity="center"
+            android:text="科幻"
+            android:textSize="9sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/broder_tags"
+            android:backgroundTint="#f78282"
+            android:gravity="center"
+            android:text="言情"
+            android:textSize="9sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/broder_tags"
+            android:backgroundTint="#f782f5"
+            android:gravity="center"
+            android:text="历史"
+            android:textSize="9sp"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@drawable/broder_tags"
+            android:backgroundTint="#f78e82"
+            android:gravity="center"
+            android:text="科普"
+            android:textSize="9sp"
+            tools:ignore="SmallSp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="这是标题\n" />
+
+        <TextView
+            android:id="@+id/txt_article"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="40"
+            android:textColor="@color/design_default_color_primary_dark"
+            android:text="@string/content" />
+
+    </LinearLayout>
+
+</LinearLayout>

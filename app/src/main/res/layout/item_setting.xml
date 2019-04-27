@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimaryDark">
+
+    <me.codeminions.icontxtview.IconTxtView
+        android:id="@+id/icontxt_setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="15dp"
+        app:icon="@drawable/ic_signout"
+        app:iconLocation="start"
+        app:iconS="30dp"
+        app:iconTint="#ffffff"
+        app:text="退出登录"
+        app:textColor="#ffffff"
+        app:textSize="15sp"
+        app:textToP="35dp">
+
+    </me.codeminions.icontxtview.IconTxtView>
+
+    <me.codeminions.icontxtview.IconTxtView
+        android:id="@+id/icontxt_more"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginEnd="5dp"
+        app:icon="@drawable/ic_flont"
+        app:iconLocation="end"
+        app:iconTint="#ffffff"
+        app:textColor="#808080"
+        app:textSize="14sp"
+        app:textToP="30dp"
+        tools:text="点击查看">
+
+    </me.codeminions.icontxtview.IconTxtView>
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="@string/tabmenu_time"
+        android:id="@+id/tab_time"
+        android:icon="@drawable/ic_time"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:title="1 min"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="3 min"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="5 min"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="10 min"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="15 min"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+
+    <item
+        android:title="@string/tabmenu_font"
+        android:id="@+id/tab_fonts"
+        android:icon="@drawable/ic_fonts"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:title="x0.5"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="x1.0"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="x1.5"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+            <item
+                android:title="x2.0"
+                android:icon="@drawable/ic_fonts"
+                app:showAsAction="never"/>
+
+        </menu>
+    </item>
+</menu>

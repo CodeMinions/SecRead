@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height="140dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/broder_tags"
+                android:backgroundTint="#a7a7a7"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="5dp">
+
+                <me.codeminions.icontxtview.IconTxtView
+                    android:layout_width="80dp"
+                    android:layout_height="106dp"
+                    android:paddingBottom="10dp"
+                    app:icon="@drawable/ic_createnote"
+                    app:iconLocation="top"
+                    app:iconS="80dp"
+                    app:iconTint="#ffffff"
+                    app:text="添加记录"
+                    app:textColor="#ffffff"
+                    app:textSize="15sp">
+
+                </me.codeminions.icontxtview.IconTxtView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_height="1dp"
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_friendspace"
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>

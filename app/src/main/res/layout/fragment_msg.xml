@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="frags.Main.MsgFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="消息"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="20dp"
+            android:text="联系人" />
+    </android.support.v7.widget.Toolbar>
+
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1e2e2c" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp">
+
+                <me.codeminions.icontxtview.IconTxtView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:back="#6eb1f9">
+
+                </me.codeminions.icontxtview.IconTxtView>
+
+                <me.codeminions.icontxtview.IconTxtView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:back="#fa61b8">
+
+                </me.codeminions.icontxtview.IconTxtView>
+
+                <me.codeminions.icontxtview.IconTxtView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:back="#db55f9">
+
+                </me.codeminions.icontxtview.IconTxtView>
+
+                <me.codeminions.icontxtview.IconTxtView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="20dp"
+                    android:layout_weight="1"
+                    app:back="#80ccf2">
+
+                </me.codeminions.icontxtview.IconTxtView>
+
+            </LinearLayout>
+
+            <!--分割线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="1dp"
+                android:background="#1e2e2c"
+                tools:targetApi="O"/>
+
+            <ImageView
+                android:src="@drawable/default_portrait"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:layout_margin="10dp"
+                android:contentDescription="广告区" />
+
+            <!--分割线-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_height="1dp"
+                android:background="#1e2e2c"
+                tools:targetApi="O"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/list_msg_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</LinearLayout>
