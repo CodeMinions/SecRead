@@ -42,6 +42,7 @@ public class RecommendFragment extends Fragment {
         };
 
 
+        viewPager.setPageMargin(20);
         viewPager.setAdapter(adapter);
         viewPager.setPageTransformer(true, new ViewPager.PageTransformer() {
             @Override

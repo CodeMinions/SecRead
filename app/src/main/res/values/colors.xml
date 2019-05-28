@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#93dad3</color>
-    <color name="colorPrimaryDark">#3a5955</color>
-    <color name="colorAccent">#fff068</color>
+    <!--版本1-->
+    <!--<color name="colorPrimary">#93dad3</color>-->
+    <!--<color name="colorPrimaryDark">#3a5955</color>-->
+    <!--<color name="colorAccent">#fff068</color>-->
+
+    <!--版本2-->
+    <color name="colorPrimary">#FDFDFE</color>
+    <color name="colorPrimaryDark">#F2F3F7</color>
+    <color name="colorAccent">#90B6F1</color>
+
 </resources>

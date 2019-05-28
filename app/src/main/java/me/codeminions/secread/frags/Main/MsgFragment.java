@@ -1,6 +1,7 @@
 package me.codeminions.secread.frags.Main;
 
-import android.support.annotation.NonNull;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -11,8 +12,9 @@ import java.util.List;
 
 import me.codeminions.common.Fragment;
 import me.codeminions.common.adapter.RecyclerAdapter;
+import me.codeminions.common.app.Application;
+import me.codeminions.factory.bean.db.User;
 import me.codeminions.secread.R;
-import me.codeminions.secread.bean.User;
 
 public class MsgFragment extends Fragment {
 
@@ -29,10 +31,15 @@ public class MsgFragment extends Fragment {
         super.initWidget(root);
 
         recyclerView = root.findViewById(R.id.list_msg_user);
+        recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
+    }
+
+    @Override
+    protected void initData() {
+
         userList = new ArrayList<>();
         initList();
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(root.getContext()));
         recyclerView.setAdapter(new RecyclerAdapter<User>(userList) {
             @Override
             public int getItemViewType(int position) {
@@ -44,7 +51,6 @@ public class MsgFragment extends Fragment {
                 return new MsgHolder(root);
             }
         });
-
     }
 
     class MsgHolder extends RecyclerAdapter.MyHolder<User> {
@@ -61,12 +67,12 @@ public class MsgFragment extends Fragment {
 
         @Override
         protected void onBind(User data) {
-            tv_name.setText(data.getUser_name());
-            tv_signature.setText(data.getUser_signature());
+            tv_name.setText(data.getName());
+            tv_signature.setText(data.getSignature());
         }
     }
 
-    void initList(){
+        void initList(){
         userList.add(new User("消息助手", "小助手图书馆"));
         userList.add(new User("雨声", "开始聊天"));
         userList.add(new User("阿屎", "开始聊天"));

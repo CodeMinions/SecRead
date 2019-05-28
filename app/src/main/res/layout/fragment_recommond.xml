@@ -7,9 +7,9 @@
     android:layout_height="match_parent"
     tools:context=".frags.Home.RecommendFragment">
 
-
     <me.codeminions.common.view.VerticalViewPager
         android:id="@+id/vertical_pager"
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 

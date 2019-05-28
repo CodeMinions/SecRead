@@ -7,14 +7,14 @@
     android:padding="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="70dp"
+        android:layout_width="60dp"
         android:layout_height="match_parent"
         android:src="@drawable/default_portrait" />
 
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginStart="5dp"
+        android:layout_marginStart="8dp"
         android:layout_weight="1"
         android:paddingVertical="2dp"
         tools:targetApi="O">
@@ -30,6 +30,7 @@
 
         <TextView
             android:id="@+id/txt_msg_signature"
+            style="@style/SecondaryTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
@@ -37,11 +38,13 @@
     </FrameLayout>
 
     <FrameLayout
+        style="@style/SecondaryTextAppearance"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="end">
 
         <TextView
+            style="@style/SecondaryTextAppearance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"

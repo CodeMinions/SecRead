@@ -9,7 +9,7 @@
         app:showAsAction="ifRoom"/>
     <item
         android:title="@string/navmenu_attent"
-        android:icon="@drawable/ic_atten"
+        android:icon="@drawable/ic_attent"
         android:id="@+id/nav_attent"
         app:showAsAction="ifRoom"/>
     <item

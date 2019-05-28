@@ -26,6 +26,7 @@ public class UnScrollViewPager extends ViewPager {
         this.scrollable = scrollable;
     }
 
+    // 不拦截事件，即传到子控件
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         return scrollable;

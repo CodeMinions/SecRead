@@ -1,10 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/me_draw"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <include
-        android:id="@+id/item_me_setting"
-        layout="@layout/item_setting"/>
+    android:layout_height="match_parent"
+    tools:context=".frags.Main.MeFragment">
 
-</LinearLayout>
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@color/colorPrimaryDark">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapse_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:collapsedTitleGravity="center_horizontal"
+                app:contentScrim="?attr/colorAccent"
+                app:expandedTitleMarginBottom="180dp"
+                app:expandedTitleMarginStart="24dp"
+                app:expandedTitleTextAppearance="@style/CollapseTextStyle"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/img_des_back"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_back"
+                    app:layout_collapseMode="parallax" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="220dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/border_oval"
+                        android:padding="5dp"
+                        android:src="@drawable/default_portrait" />
+
+                    <Button
+                        android:id="@+id/btn_me_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="60dp"
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="@string/btn_me_edit"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end|bottom"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:drawableTop="@drawable/ic_attent"
+                        android:drawableTint="@color/colorAccent"
+                        android:padding="8dp" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginHorizontal="15dp"
+                    android:orientation="vertical"
+                    tools:targetApi="O">
+
+                    <TextView
+                        android:id="@+id/txt_me_userId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp"
+                        tools:text="用户编号：13873543" />
+                    <!--分割线-->
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:layout_marginVertical="8dp"
+                        android:background="#3e765a" />
+
+                    <TextView
+                        android:id="@+id/txt_me_signature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        tools:text="填写个性签名更容易获得别人的关注哦～" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <TextView
+                            android:layout_width="25dp"
+                            android:layout_height="15dp"
+                            android:layout_marginHorizontal="1dp"
+                            android:background="@drawable/border_tags"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="天津"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="15dp"
+                            android:layout_marginHorizontal="1dp"
+                            android:background="@drawable/border_tags"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:gravity="center"
+                            android:paddingHorizontal="4dp"
+                            android:text="@string/txt_me_tagDe"
+                            android:textColor="@color/textColorSecondary"
+                            android:textSize="9sp"
+                            tools:ignore="SmallSp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="7dp"
+                            android:text="@string/me_getPraise" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="7dp"
+                            android:text="@string/me_attent" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="7dp"
+                            android:text="@string/me_fans" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_me_add"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:drawableStart="@drawable/ic_camera"
+                        android:drawableTint="@color/colorAccent"
+                        android:paddingHorizontal="120dp"
+                        android:text="@string/btn_me_addNote"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:title="Black Bird"
+                    app:titleTextColor="@color/textColorAccent" />
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <!--侧边栏开关-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/btn_me_draw"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="end|top"
+            android:layout_margin="20dp"
+            android:background="@drawable/border_oval"
+            android:src="@drawable/ic_more_hor" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:targetApi="O">
+
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    app:tabTextAppearance="@style/TextStyle.Design.Tab">
+
+                </android.support.design.widget.TabLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="600dp"
+                    android:background="@color/colorPrimary">
+
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_draw_msg"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimaryDark"
+        app:itemTextColor="@color/colorAccent"
+        app:itemIconTint="@color/colorAccent"
+        android:outlineAmbientShadowColor="@color/colorAccent"
+        android:outlineSpotShadowColor="@color/colorAccent"
+        app:menu="@menu/draw_menu">
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

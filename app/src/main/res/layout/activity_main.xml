@@ -1,64 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer_setting"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <me.codeminions.common.view.UnScrollViewPager
+        android:id="@+id/lay_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorPrimary">
 
-        <me.codeminions.common.view.UnScrollViewPager
-            android:id="@+id/lay_container"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
+    </me.codeminions.common.view.UnScrollViewPager>
 
-        </me.codeminions.common.view.UnScrollViewPager>
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="2dp"
+        app:tabMode="fixed"
+        app:tabTextAppearance="@style/TextStyle.Design.Tab"
+        tools:targetApi="O">
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/tab_bottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorPrimaryDark"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="fixed"
-            app:tabTextAppearance="@style/TextStyle.Design.Tab"
-            tools:targetApi="O">
+    </android.support.design.widget.TabLayout>
 
-        </android.support.design.widget.TabLayout>
-
-    </LinearLayout>
-
-    <!--<LinearLayout-->
-    <!--android:layout_width="200dp"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_gravity="end"-->
-    <!--android:background="@color/colorAccent">-->
-
-    <!--<include-->
-    <!--android:id="@+id/item_me_setting"-->
-    <!--layout="@layout/item_setting"/>-->
-
-    <!--</LinearLayout>-->
-
-    <!--可以尝试上滑把头像收进去的动画-->
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_draw_msg"
-        android:layout_width="200dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
-        android:background="@color/colorAccent"
-        app:headerLayout="@layout/layout_me_drawhead"
-        app:itemTextColor="@color/colorPrimaryDark"
-        app:menu="@menu/draw_menu">
-
-
-    </android.support.design.widget.NavigationView>
-
-
-</android.support.v4.widget.DrawerLayout>
+</LinearLayout>

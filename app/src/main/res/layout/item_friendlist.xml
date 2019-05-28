@@ -54,10 +54,11 @@
             tools:text="我失去了一只臂膀，就睁开了一只眼睛。"/>
 
         <View
-            android:background="@drawable/broder_tags"
+            android:background="@drawable/border_tags"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="20dp"
             android:layout_width="match_parent"
+            android:backgroundTint="@color/colorAccent"
             android:layout_height="50dp" />
 
     </LinearLayout>

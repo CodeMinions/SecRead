@@ -58,9 +58,43 @@
         
         综上所述，iOS是支撑苹果品牌溢价的王牌，但5G时代配合Android系统体验的优化，系统体验差距逐步弥合是一种大势，在5G大潮下Android手机还有弯道超车的机会，华为与苹果在5G时代的下半场之争，还有的看。
         作者：王新喜 TMT资深评论人 本文未经许可谢绝转载 我的微信公众号：热点微评（redianweiping）</string>
-    <string name="txt_versioninfo">秒阅  version 1.0.1</string>
-    <string name="setting_wallet">钱包</string>
-    <string name="setting_about">关于</string>
-    <string name="setting_general">通用</string>
+
+    <string name="txt_versionInfo">秒阅  version 1.0.1</string>
+
     <string name="setting_account">账号</string>
+    <string name="setting_account_safe">账号与安全</string>
+    <string name="setting_account_privacy">隐私设置</string>
+
+    <string name="setting_general">通用</string>
+    <string name="setting_general_call">通知设置</string>
+    <string name="setting_general_g">通用设置</string>
+
+    <string name="setting_wallet">钱包</string>
+    <string name="setting_wallet_shop">书籍商城</string>
+
+    <string name="setting_about">关于</string>
+    <string name="setting_about_deal">用户协议</string>
+    <string name="setting_about_privacy_deal">隐私政策</string>
+    <string name="setting_about_tip">关于秒阅</string>
+    <string name="setting_about_feekback">反馈与帮助</string>
+
+    <string name="setting_about_clean">清楚缓存</string>
+    <string name="setting_logout">退出登录</string>
+
+    <string name="btn_me_edit">编辑资料</string>
+    <string name="img_des_back">更换背景</string>
+    <string name="me_userId">用户编号：</string>
+    <string name="me_getPraise">获赞</string>
+    <string name="me_attent">关注</string>
+    <string name="me_fans">粉丝</string>
+    <string name="btn_me_addNote">添加记录</string>
+    <string name="txt_me_tagDe">+ 增加性别年龄，学校等标签</string>
+
+    <string name="btn_log_act_register">注册</string>
+    <string name="btn_log_act_login">登录</string>
+    <string name="txt_log_act_other">其他登录方式</string>
+    <string name="hint_log_act_phone">请输入账号/手机号</string>
+    <string name="hint_log_act_pwd">请输入密码</string>
+
+
 </resources>

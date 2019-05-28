@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/me_draw"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".frags.Main.MeFragment">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/default_back">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/btn_me_draw"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="end|top"
+                android:layout_margin="20dp"
+                android:background="@drawable/border_oval"
+                android:src="@drawable/ic_more_hor" />
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:padding="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:targetApi="O">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/border_oval"
+                        android:padding="5dp"
+                        android:src="@drawable/default_portrait" />
+
+                    <Button
+                        android:id="@+id/btn_me_edit"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="60dp"
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="编辑资料"
+                        android:textColor="#565656"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:drawableTop="@drawable/ic_attent"
+                        android:drawableTint="#565656"
+                        android:padding="8dp" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginVertical="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:textColor="#ffffff"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:text="Black Bird" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"
+                        android:text="用户编号：13873543" />
+
+                </FrameLayout>
+
+                <!--分割线-->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="8dp"
+                    android:background="#3e765a" />
+
+                <TextView
+                    android:text="填写个性签名更容易获得别人的关注哦～"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginHorizontal="1dp"
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="天津"
+                        android:gravity="center"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp"
+                        android:layout_width="25dp"
+                        android:layout_height="15dp" />
+
+                    <TextView
+                        android:background="@drawable/border_tags"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:layout_marginHorizontal="1dp"
+                        android:text="+ 增加性别年龄，学校等标签"
+                        android:paddingHorizontal="4dp"
+                        android:gravity="center"
+                        android:textSize="9sp"
+                        tools:ignore="SmallSp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginVertical="10dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="获赞"
+                        android:textSize="14sp"
+                        android:layout_marginHorizontal="7dp"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="关注"
+                        android:textSize="14sp"
+                        android:layout_marginHorizontal="7dp"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:text="粉丝"
+                        android:textSize="14sp"
+                        android:layout_marginHorizontal="7dp"
+                        android:textColor="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <Button
+                    android:text="添加记录"
+                    android:textSize="15sp"
+                    android:drawableStart="@drawable/ic_camera"
+                    android:paddingHorizontal="120dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_me"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                </android.support.design.widget.TabLayout>
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/vp_me"
+                    android:layout_width="match_parent"
+                    android:background="@color/colorPrimary"
+                    android:layout_height="600dp">
+
+                </android.support.v4.view.ViewPager>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_draw_msg"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/colorAccent"
+        app:itemTextColor="@color/colorPrimaryDark"
+        app:menu="@menu/draw_menu">
+
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>
