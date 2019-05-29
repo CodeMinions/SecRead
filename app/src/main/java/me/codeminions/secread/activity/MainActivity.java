@@ -72,14 +72,15 @@ public class MainActivity extends AppCompatActivity {
 //                        .setMessage("你还未登录，立即登录？").setTitle("提示").show();
 
                 LoginActivity.startAction(MainActivity.this);
+//                viewPager.setCurrentItem(4);
             } else {
                 Log.i("登录检测", "已登录");
                 TabLayout.Tab tab = tabLayout.getTabAt(pos);
                 if (tab != null) {
                     tab.select();
                 }
-                viewPager.setCurrentItem(pos);
             }
+            viewPager.setCurrentItem(pos);
         }
     };
 
@@ -115,5 +116,9 @@ public class MainActivity extends AppCompatActivity {
                 view.setTint(Color.RED);
             else
                 view.setTint(ContextCompat.getColor(this, R.color.colorAccent));
+    }
+
+    public UnScrollViewPager getViewPager() {
+        return viewPager;
     }
 }

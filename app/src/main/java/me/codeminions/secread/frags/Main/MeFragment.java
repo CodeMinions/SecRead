@@ -1,12 +1,15 @@
 package me.codeminions.secread.frags.Main;
 
+import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -19,10 +22,12 @@ import me.codeminions.common.adapter.FragmentAdapter;
 import me.codeminions.common.app.Application;
 import me.codeminions.factory.bean.db.User;
 import me.codeminions.secread.R;
+import me.codeminions.secread.activity.LoginActivity;
+import me.codeminions.secread.activity.MainActivity;
 
 public class MeFragment extends Fragment implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
-    private User user = Application.getCurrentUser();
+    private User user;
 
     ViewPager viewPager;
     TabLayout tabLayout;
@@ -80,20 +85,36 @@ public class MeFragment extends Fragment implements View.OnClickListener, Naviga
 
     @Override
     protected void initData() {
-        if (Application.getCurrentUser() == null)
+        if (Application.getCurrentUser() == null || Application.getCurrentUser().equals(user))
             return;
+        user = Application.getCurrentUser();
 
         toolbarLayout.setTitle(user.getName());
 
         String id = getResources().getString(R.string.me_userId) + user.getId();
         txt_UserId.setText(id);
 
-        if (user.getSignature() != null)
-            if (user.getSignature().isEmpty())
-                txt_signature.setText("填写个性签名更容易获得别人的关注哦～");
-            else
-                txt_signature.setText(user.getSignature());
+        if (user.getSignature() == null || user.getSignature().isEmpty())
+            txt_signature.setText("填写个性签名更容易获得别人的关注哦～");
+        else
+            txt_signature.setText(user.getSignature());
     }
+
+//    @Override
+//    public void setUserVisibleHint(boolean isVisibleToUser) {
+//        super.setUserVisibleHint(isVisibleToUser);
+//        Log.i("visible", "调用");
+//        if(!isVisibleToUser){
+//            if(isVisible != 0){
+//                isVisible = 0;
+//            }
+//        }else{
+//            isVisible = 1;
+//            if(mRoot != null) {
+//                initData();
+//            }
+//        }
+//    }
 
 
     @Override
@@ -124,7 +145,12 @@ public class MeFragment extends Fragment implements View.OnClickListener, Naviga
                 Toast.makeText(mRoot.getContext(), "退出登录", Toast.LENGTH_SHORT).show();
                 user = null;
                 Application.setCurrentUser(null);
-                initWidget(mRoot);
+                LoginActivity.startAction(mRoot.getContext());
+
+//                MainActivity activity = (MainActivity) getActivity();
+                draw.closeDrawer(GravityCompat.END);
+//                if(activity != null)
+//                    activity.getViewPager().setCurrentItem(0);
                 break;
         }
         return true;

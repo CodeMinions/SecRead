@@ -74,13 +74,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         initWidget();
     }
 
-    @Override
-    public void finish() {
-        super.finish();
-
-
-    }
-
     void initWidget() {
         edit_user = findViewById(R.id.edit_login_userId);
         edit_pwd = findViewById(R.id.edit_login_pwd);
@@ -158,7 +151,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 switch (msg.what) {
                     case 102:
                         // 登陆成功
-                        activity.comeBack();
+                        Application.setCurrentUser(activity.user);
+                        Toast.makeText(activity, "登陆成功", Toast.LENGTH_SHORT).show();
+                        activity.finish();
                         break;
                     case 103:
                         // 访问服务器失败
@@ -174,14 +169,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-    void comeBack() {
-        Intent intent = new Intent().putExtra("user", user);
-        setResult(RESULT_OK, intent);
-        Application.setCurrentUser(user);
-        finish();
-    }
-
-
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -189,7 +176,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 userId = edit_user.getText().toString();
                 pwd = edit_pwd.getText().toString();
                 Toast.makeText(this, "发送信息", Toast.LENGTH_SHORT).show();
-                Log.i("okhttp", "发送消息");
                 commitLogin();
                 break;
             case R.id.btn_register:
